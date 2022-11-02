@@ -61,9 +61,14 @@ catchphraseButton.addEventListener('click', () => {
     displayCatchphrases();
 });
 
+function createStatsString(headNum, middleNum, bottomNum) {
+    return `You have changed the head ${headNum} times, the body ${middleNum} times, the bottom ${bottomNum} times`;
+}
+
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
     const statsString = createStatsString(headCount, middleCount, bottomCount);
+
     reportEl.textContent = statsString;
 }
 
